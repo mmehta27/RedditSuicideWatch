@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src = "RedditSuicideWatchWebsite.js"></script>
 </head>
 <body style="font: Avenir Next;">
     <div style="text-align: center; margin-left: auto; margin-right: auto">
@@ -10,8 +11,8 @@
             <div class="card-body" style="margin-bottom: 2.5%; margin-top: 2.5%;">
               <h2 class="card-title"><strong>Reddit Suicide Watch Tool</strong></h2>
               <p class="card-text">developed by i-Made</p>
-              <input style =" width: 70%; margin-left: 15%;margin-right: 15%; margin-bottom: 2%;"type="link" class="form-control" id="link" placeholder="Paste Old Reddit URL">
-              <a href="#" class="btn btn-primary">Generate Feedback</a>
+              <input style =" width: 70%; margin-left: 15%;margin-right: 15%; margin-bottom: 2%;"type="link" class="form-control" id="link" placeholder="Paste Old Reddit URL" onkeyup = "submitKeyClicked(event)">
+              <a href="#link" id = "submitButton" class="btn btn-primary" role = "button" onclick = "correctInput()">Generate Feedback</a>
             </div>
           </div>
         <h1>
