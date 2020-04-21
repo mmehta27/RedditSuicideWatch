@@ -8,7 +8,7 @@ function correctInput() {
 	//If new reddit link, convert to old
 	var checkNewRedditCom = input.substring(firstR, secondR + 1);
 	if (checkNewRedditCom == "reddit.com/r"){
-		input = "old." + input
+		input = "old." + input;
 	}
 
 	var checkOldRedditCom = input.substring(input.indexOf("o"), secondR + 1);
