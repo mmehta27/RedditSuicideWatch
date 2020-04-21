@@ -1,7 +1,8 @@
 const request = require('request');
 const cheerio = require('cheerio');
+const jsonData = require('./data');
 
-function getPostText(url){
+function getPostText(url, callBack){
 
 // function takes any old reddit url as a parameter
 
@@ -12,10 +13,23 @@ function getPostText(url){
             const $ = cheerio.load(html);
 
             const postText = $('.expando'); // selects postText which is under div class "expando"
-            console.log(postText.text()); // strips out html
+            //console.log(postText.text()); // strips out html
+			return callBack(postText.text());
         }
     })
 };
 
+/*function cleanText(response) {
+    let processed = response.toLowerCase().replace(/[^\w\s]/gi,'');
+	console.log(processed)
+    return processed;
+}*/
+
+
+
 //calls function with an example link
-getPostText('https://old.reddit.com/r/SuicideWatch/comments/fjjtc5/my_life_has_gone_to_shit/');
+//getPostText("https://old.reddit.com/r/AnarchyChess/comments/fpu1oe/i_lost_my_first_chess_game/", logText);
+
+module.exports = {
+	getPostText
+};
