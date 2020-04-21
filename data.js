@@ -9,10 +9,6 @@ function stripUnderscore(data) {
 	return data;
 }
 
-//stripUnderscore(data);
-//console.log(data[10]);
-//This will call the 31st cluster (since cluster index starts at zero) word list. The word list is a an array of words and their frequencies.  
-//console.log(data[30].word_list)
 module.exports = {
 	data,
 	stripUnderscore

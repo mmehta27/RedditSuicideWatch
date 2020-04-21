@@ -17,11 +17,6 @@ function count(postText) {
 					for (wordindex = 0; wordindex < arrText.length; wordindex++) {
 						if (arrText[wordindex] === pair[0]) {
 							createJson(pair[0], clusterNum);
-							/*if (clusterNum in freq){
-								freq[clusterNum] +=1;
-							} else {
-								freq[clusterNum] = 1;
-							}*/
 						}
 					}
 				}

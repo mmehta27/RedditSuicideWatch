@@ -19,17 +19,6 @@ function getPostText(url, callBack){
     })
 };
 
-/*function cleanText(response) {
-    let processed = response.toLowerCase().replace(/[^\w\s]/gi,'');
-	console.log(processed)
-    return processed;
-}*/
-
-
-
-//calls function with an example link
-//getPostText("https://old.reddit.com/r/AnarchyChess/comments/fpu1oe/i_lost_my_first_chess_game/", logText);
-
 module.exports = {
 	getPostText
 };
