@@ -51,7 +51,6 @@ function countBigram(arr){
 
 function countTrigram(postText){
 	var arr = postText.split(" ");
-	var freq = { };
 	for (var clusterNum in dataJson){
 		for (pairIndex = 0; pairIndex <  dataJson[clusterNum].word_list.length; pairIndex++){
 			var pair = dataJson[clusterNum].word_list[pairIndex]
@@ -75,7 +74,7 @@ function countTrigram(postText){
 	};
 }
 function cleanText(response) {
-    let processed = response.toLowerCase().replace(/[^\w\s]/gi,'');
+    let processed = response.toLowerCase().replace(/[^\w\s]/gi,'').trim();
     count(processed);
 }
 function createJson(word, clusterNum) {
@@ -106,6 +105,6 @@ function printData() {
 }
 
 var data = [];
-var url = 'https://old.reddit.com/r/SuicideWatch/comments/g4rqbp/hi_i_love_you_all/';
+var url = 'https://old.reddit.com/r/SuicideWatch/comments/g54p20/killing_myself_is_a_permanent_solution_to_a/';
 scrape.getPostText(url, cleanText);
 clusterData.stripUnderscore(dataJson);
