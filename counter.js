@@ -1,10 +1,12 @@
 var clusterData = require("./data");
 var scrape = require("./scrape.js");
 var dataJson = clusterData.data;
+var stopWords = clusterData.stopWords;
 
 function count(postText) {
+	var postTextArray = removeStopWords(postText);
 	console.log(postText);
-	var trigram = countTrigram(postText);
+	var trigram = countTrigram(postTextArray);
 	// console.log(trigram.frequency, trigram.arrayText);
 	var bigram = countBigram(trigram.arrayText);
 	// console.log(bigram.frequency, bigram.arrayText);
@@ -49,8 +51,7 @@ function countBigram(arr){
 	};
 }
 
-function countTrigram(postText){
-	var arr = postText.split(" ");
+function countTrigram(arr){
 	for (var clusterNum in dataJson){
 		for (pairIndex = 0; pairIndex <  dataJson[clusterNum].word_list.length; pairIndex++){
 			var pair = dataJson[clusterNum].word_list[pairIndex]
@@ -102,6 +103,17 @@ function printData() {
 	for (var index in data) {
 		console.log(data[index]);
 	}
+}
+function removeStopWords(postText) {
+	var arr = postText.split(" ");
+	for (var index = 0; index < stopWords.length; index++) {
+		for (var word in arr) {
+			if (arr[word] === stopWords[index]) {
+				arr.splice(word, 1);
+			}
+		}
+	}
+	return arr;
 }
 
 var data = [];
