@@ -1,5 +1,5 @@
 {
-  "name": "webscraping",
+  "name": "suicidewatchtool",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,4 +13,5 @@
     "cheerio": "^1.0.0-rc.3",
     "request": "^2.88.2"
   }
+  "start": "node counter.js"
 }

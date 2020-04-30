@@ -2,10 +2,11 @@ var clusterData = require("./data");
 var scrape = require("./scrape.js");
 var dataJson = clusterData.data;
 var stopWords = clusterData.stopWords;
-
+function test() {
+	console.log("Hello")
+}
 function count(postText) {
 	var postTextArray = removeStopWords(postText);
-	console.log(postText);
 	var trigram = countTrigram(postTextArray);
 	// console.log(trigram.frequency, trigram.arrayText);
 	var bigram = countBigram(trigram.arrayText);
@@ -25,7 +26,8 @@ function count(postText) {
 			}
 		}
 	}
-    printData(); 
+	console.log(data[0].clusterNumber)
+    //printData(); 
 }
 function countBigram(arr){
 	for (var clusterNum in dataJson){
@@ -117,6 +119,13 @@ function removeStopWords(postText) {
 }
 
 var data = [];
-var url = 'https://old.reddit.com/r/SuicideWatch/comments/g54p20/killing_myself_is_a_permanent_solution_to_a/';
-scrape.getPostText(url, cleanText);
+//var url = 'https://old.reddit.com/r/SuicideWatch/comments/g54p20/killing_myself_is_a_permanent_solution_to_a/';
+//var postText = scrape.getPostText(url, cleanText);
+postText = "I only want my close friends and family members to remember me... Not people I haven't talked to in a year or so... It's offensive to me. You could have talked to me and you could have cared, but untill I take my own life, you suddenly care and miss me... I don't mean to offend anyone on this post...";
+count(postText)
 clusterData.stripUnderscore(dataJson);
+
+
+
+
+
