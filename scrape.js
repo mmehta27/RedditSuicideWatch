@@ -3,9 +3,6 @@ const cheerio = require('cheerio');
 const jsonData = require('./data');
 
 function getPostText(url, callBack){
-
-// function takes any old reddit url as a parameter
-
     request(url, (error,
     response, html) => {
         if(!error && response.statusCode == 200) // ensure successful http response
