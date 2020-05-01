@@ -155,7 +155,7 @@ function printData() {
 	var ctx = document.getElementById('myChart').getContext('2d');
 	var chart = new Chart(ctx, {
 	    // The type of chart we want to create
-	    type: 'bar',
+	    type: 'pie',
 
 	    // The data for our dataset
 	    data: {
@@ -186,8 +186,12 @@ function generateRandomColor(n)
 {
 	colors = []
 	while (n > 0) {
-		var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-		colors.push(randomColor)
+		r = Math.floor(Math.random() * 200);
+		g = Math.floor(Math.random() * 200);
+		b = Math.floor(Math.random() * 200);
+		v = Math.floor(Math.random() * 500);
+		c = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+		colors.push(c)
 		n -= 1;
 	}
     

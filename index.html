@@ -12,20 +12,18 @@
             <div class="card-body" style="margin-bottom: 2.5%; margin-top: 2.5%;">
               <h2 class="card-title"><strong>Reddit Suicide Watch Tool</strong></h2>
               <p class="card-text">developed by i-Made</p>
-              <input style =" width: 70%; margin-left: 15%;margin-right: 15%; margin-bottom: 2%;"type="link" class="form-control" id="link" placeholder="Paste Old Reddit URL">
-              <a href="#link" id = "submitButton" class="btn btn-primary" role = "button" onclick = "count()">Generate Feedback</a>
+              <textarea style =" width: 70%; margin-left: 15%;margin-right: 15%; margin-bottom: 2%;"type="link" class="form-control" id="link" placeholder="Paste Old Reddit URL" rows = "3"></textarea>
+              <button type = "button" class = "btn btn-primary" id = "submitButton" class="btn btn-primary" role = "button" onclick = "count()">Generate Feedback</a>
 
             </div>
           </div>
-        <h1>
-            
-        </h1>
-        
+		<div id = "link" style="height:100%;margin-top:10%;margin-bottom:10%" class = "pagebreak">
+			<h2 id="Results" class="text-center"></h2>
+			<canvas id="myChart"></canvas>
+			<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		</div>
     </div>
-    <div id = "link" style="height:100%;margin-top:40%" class = "pagebreak">
-      <h2 id="Results" class="text-center"></h2>
-    </div>
-    <canvas id="myChart"></canvas>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    
+    
 </body>
 </html>
