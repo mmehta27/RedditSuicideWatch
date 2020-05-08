@@ -147,7 +147,7 @@ function printData() {
 	var labels2 = []
 	var dataForChart2 = []
 	for (var index in data) {
-		labels2.push("Cluster Number " + data[index].clusterNumber)
+		labels2.push("Cluster Number " + (parseInt(data[index].clusterNumber) + 1))
 		dataForChart2.push(data[index].totalCount)
 	}
 	colorsForChart = generateRandomColor(data.length);
