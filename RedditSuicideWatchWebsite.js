@@ -102,7 +102,7 @@ function createJson(word, clusterNum) {
 	}
 }
 function printData() {
-	document.getElementById('Results').innerHTML = "Results of Text Analysis (Cluster Occurence Frequencies):";
+	document.getElementById('Results').innerHTML = "Results of Text Analysis (Cluster Occurence Frequencies)";
 	var labels1 = ["Cluster Number " + data[0].clusterNumber,"Cluster Number " + data[1].clusterNumber, "Cluster Number " + data[2].clusterNumber, "Cluster Number " + data[3].clusterNumber]
 	var labels2 = []
 	var dataForChart2 = []
@@ -111,7 +111,7 @@ function printData() {
 		dataForChart2.push(data[index].totalCount)
 	}
 	//colorsForChart = generateRandomColor(data.length);
-	colorsForChart = makeColorGradient(.2,.2,.2,0,2,4,128,127,data.length);
+	colorsForChart = makeColorGradient(.2,.2,.2,0,2,4,128,127,data.length).reverse();
 	dataForChart = [data[0].totalCount, data[1].totalCount, data[2].totalCount, data[3].totalCount]
 	var ctx = document.getElementById('myChart').getContext('2d');
 	var chart = new Chart(ctx, {
@@ -140,6 +140,10 @@ function printData() {
     	}
 
 	});
+	var x = document.getElementById("HiddenDiv");
+	var y = document.getElementById("HiddenDiv2");
+	y.style.display = "block";
+	x.style.display = "block";
 }
 
 function totalOccurences() {

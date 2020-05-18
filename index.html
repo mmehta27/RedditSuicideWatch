@@ -18,7 +18,6 @@
               <p class="card-text">Developed by i-MADE at UIUC</p>
               <textarea style =" width: 70%; margin-left: 15%;margin-right: 15%; margin-bottom: 2%;"type="link" class="form-control" id="link" placeholder="Paste Post Text" rows = "3"></textarea>
               <button type = "button" class = "btn btn-primary" id = "submitButton" class="btn btn-primary" role = "button" onclick = "count()">Generate Feedback</a>
-
             </div>
           </div>
 		<div id = "link" style="height:100%;margin-top:10%;margin-bottom:10%" class = "pagebreak">
@@ -27,7 +26,75 @@
 			<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 		</div>
     </div>
-    
+    <div style="display: none" id = "HiddenDiv">
+      <h2 class="text-center" style="color: white">Table of Top Clusters Associated with Risk Factors</h2>
+      <table id="customers" align="center">  
+        <tr>
+          <th>Negative Self Worth</th>
+          <th>Direct Actions Towards Suicide</th>
+          <th>Distraction Methods</th>
+          <th>Substance Abuse</th>
+          <th>Troubling Relationships</th>
+          <th>Seeking Companionship</th>
+          <th>School/Work Pressures</th>
+          <th>Mental Illness</th>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>2</td>
+          <td>26</td>
+          <td>72</td>
+          <td>66</td>
+          <td>12</td>
+          <td>10</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>59</td>
+          <td>18</td>
+          <td>48</td>
+          <td>82</td>
+          <td>85</td>
+          <td>28</td>
+          <td>87</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>63</td>
+          <td>38</td>
+          <td>53</td>
+          <td>88</td>
+          <td>86</td>
+          <td>29</td>
+          <td>91</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>42</td>
+          <td></td>
+          <td></td>
+          <td>100</td>
+          <td>47</td>
+          <td>96</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>45</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>71</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div align="center" style="display: none" id = "HiddenDiv2" >
+      <h2 style="color: white">Top Words of Each Cluster</h2>
+      <embed src="topwords.pdf#view=FitH" width="95%" height=600>
+    </div>
     
 </body>
 </html>
